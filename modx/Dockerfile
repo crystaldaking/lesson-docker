@@ -1,4 +1,4 @@
-FROM php:7.0-fpm
+FROM php:7.2-fpm
 
 MAINTAINER Ivan Klimchuk <ivan@klimchuk.com> (@alroniks)
 
@@ -8,7 +8,7 @@ RUN docker-php-ext-install pdo pdo_mysql
 
 RUN php -r "readfile('http://getcomposer.org/installer');" | php -- --install-dir=/usr/bin/ --filename=composer
 
-RUN cd /var/www && git clone https://github.com/modmore/Gitify.git && cd Gitify && composer install && cd -
+RUN cd /var/www && git clone https://github.com/modmore/gitify.git && cd Gitify && composer install && cd -
 
 RUN { echo 'date.timezone=Europe/Minsk'; } > /usr/local/etc/php/conf.d/datetime.ini
 
