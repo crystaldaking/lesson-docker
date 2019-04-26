@@ -4,7 +4,7 @@ MAINTAINER Ivan Klimchuk <ivan@klimchuk.com> (@alroniks)
 
 RUN apt-get update && apt-get install -y curl zip unzip git vim
 
-RUN docker-php-ext-install pdo pdo_mysql
+RUN docker-php-ext-install pdo pdo_mysql zip
 
 RUN php -r "readfile('http://getcomposer.org/installer');" | php -- --install-dir=/usr/bin/ --filename=composer
 
