@@ -13,7 +13,7 @@ Install Docker and Docker Compose tools. More infromation here https://www.docke
 For run all containers just run command:
 
 ```
-docker-composer up -d
+docker-compose up -d
 ```
 
 For stop and remove all containers run command:
